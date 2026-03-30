@@ -1,7 +1,16 @@
 {
   "permissions": {
     "allow": [
-      "Bash(cmd.exe /c \"node --version && npm --version\")"
+      "Bash(cmd.exe /c \"node --version && npm --version\")",
+      "Bash(powershell.exe -command \"node --version; npm --version\")",
+      "Bash(powershell.exe -command \"npm create vite@latest client -- --template vanilla && cd client && npm install && npm install phaser\")",
+      "Bash(powershell.exe -command \"npm create vite@latest client -- --template vanilla\")",
+      "Bash(powershell.exe -command \"npm install\")",
+      "Bash(powershell.exe -command \"npm install phaser\")",
+      "Bash(powershell.exe -command \"npm install express socket.io cors\")",
+      "Bash(powershell.exe -command \"Remove-Item -Recurse -Force src, public, counter.js -ErrorAction SilentlyContinue; New-Item -ItemType Directory -Force src/scenes, src/entities, src/levels, src/systems | Out-Null; Write-Host ''Done''\")",
+      "Bash(powershell.exe -command \"npm install socket.io-client\")",
+      "Bash(powershell.exe -command \"npm run build 2>&1\")"
     ]
   }
 }
